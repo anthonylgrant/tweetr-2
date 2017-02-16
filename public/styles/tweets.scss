@@ -1,13 +1,31 @@
 .new-tweet {
   background-color: #eee;
   padding: .75em;
-  textarea[name="text"] {
-    display: block;
-    width: 100%;
-    padding: .5em .75em;
-    margin-bottom: .5em;
+  border: 1px solid #bdc3c7;
+  border-radius: 1em;
+  h2 {
+    border-bottom: 1px solid #000;
   }
-  input[type="submit"] {
-    
+  form[action="http://localhost:8080/tweets"] {
+    flex-flow: column nowrap;
+    textarea[name="text"] {
+      flex: 0;
+      display: inline;
+      width: 100%;
+      padding: .5em .75em;
+      margin-bottom: .5em;
+      outline: none;
+    }
+    input[type="submit"] {
+      float: left;
+    }
+    span.counter {
+      float: right;
+    }
+  }
+  form[action="http://localhost:8080/tweets"]:after {
+    content: '';
+    display: block;
+    clear: both;
   }
 }
