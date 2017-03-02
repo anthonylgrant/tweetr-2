@@ -21,6 +21,12 @@
     }
     span.counter {
       float: right;
+      transition: all 1s ease;
+    }
+    span.alert {
+      color: hsl(, 100, 54);
+      transform: scale(1.5);
+      transition: transform 1s ease;
     }
   }
   form[action="http://localhost:8080/tweets"]:after {

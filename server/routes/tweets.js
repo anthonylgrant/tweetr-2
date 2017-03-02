@@ -39,6 +39,7 @@ module.exports = function(DataHelpers) {
         res.status(201).send();
       }
     });
+    res.status(300).redirect("/tweets");
   });
 
   return tweetsRoutes;
